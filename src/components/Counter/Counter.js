@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {ADD_ONE, MINUS_ONE} from "../../actions";
 
 const containerStyle = {
 	display: 'flex'
@@ -15,11 +16,11 @@ class Counter extends Component {
 		number: 0
 	};
 	addOne = () => {
-		this.props.dispatch({type: 'ADD_ONE'});
+		this.props.dispatch({type: ADD_ONE});
 	};
 
 	minusOne = () => {
-		this.props.dispatch({type: 'MINUS_ONE'});
+		this.props.dispatch({type: MINUS_ONE});
 	};
 
 	render() {
